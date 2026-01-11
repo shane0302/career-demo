@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>銀齡新動力 - 問卷 Survey</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="bg-decoration" aria-hidden="true">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+  </div>
+
+  <header>
+    <h1><i class="fas fa-clipboard-list"></i> 問卷 Survey</h1>
+    <p>請選擇你的條件（含技能偏好），系統會計算 Top 3 推薦與匹配度</p>
+    <p style="margin-top:14px;font-size:.98rem;opacity:.9;">
+      <a class="small-link" href="./index.html"><i class="fas fa-house"></i> 回首頁</a>
+      &nbsp;|&nbsp;
+      <a class="small-link" href="./result.html"><i class="fas fa-square-poll-vertical"></i> 直接看結果</a>
+    </p>
+  </header>
+
+  <main class="main-container">
+    <section class="card">
+      <h2 class="section-title">選擇你的適職條件</h2>
+      <p class="muted" id="helloName" style="margin-top:-8px;"></p>
+
+      <div class="grid-questions">
+        <div>
+          <label><i class="fas fa-heart"></i> 興趣方向</label>
+          <select id="q_interest">
+            <option value="talk">熱衷交流分享</option>
+            <option value="fix">專注手作修理</option>
+            <option value="admin">穩定行政處理</option>
+          </select>
+        </div>
+        <div>
+          <label><i class="fas fa-screwdriver-wrench"></i> 技能偏好</label>
+          <select id="q_skill">
+            <option value="doc">文書（文件/表單/打字）</option>
+            <option value="service">服務（接待/門市/客服）</option>
+            <option value="craft">手作（維修/工藝/修繕）</option>
+            <option value="guide">導覽（解說/帶團/分享）</option>
+          </select>
+        </div>
+
+
+        <div>
+          <label><i class="fas fa-dumbbell"></i> 體能狀況</label>
+          <select id="q_phys">
+            <option value="low">希望室內靜態</option>
+            <option value="mid">可接受適度走動</option>
+          </select>
+        </div>
+
+        <div>
+          <label><i class="fas fa-clock"></i> 工作時段</label>
+          <select id="q_time">
+            <option value="flex">彈性兼職 (Part-time)</option>
+            <option value="full">穩定全職 (Full-time)</option>
+          </select>
+        </div>
+
+        <div>
+          <label><i class="fas fa-laptop"></i> 數位適應</label>
+          <select id="q_tech">
+            <option value="low">基礎 (手機使用)</option>
+            <option value="high">進階 (電腦文書)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btnAnalyze" type="button"><i class="fas fa-magic"></i> 開始智能媒合分析</button>
+        <button class="btn btn-ghost" id="btnReset" type="button"><i class="fas fa-rotate-left"></i> 清除已存資料</button>
+      </div>
+
+      <div id="loader">
+        <div class="spinner"></div>
+        <p class="muted">正在計算匹配度並生成推薦理由卡片...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>胡學慈 隊長作品 | 致力落實 SDG 永續發展目標</p>
+  </footer>
+
+  <script src="./js/common.js"></script>
+  <script src="./js/survey.js"></script>
+</body>
+</html>

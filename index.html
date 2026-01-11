@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEMO展示｜銀齡新動力</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- background decoration (reuse) -->
+  <div class="bg-decoration">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+  </div>
+
+  <header class="demo-hero">
+    <h1>DEMO展示</h1>
+    <div class="sub">
+      銀齡新動力｜職涯導航系統原型（對應 <strong>SDG 8 尊嚴工作與經濟成長</strong>）
+      </div>
+    <div class="tech-tags">
+      <span class="tech-tag html"><i class="fab fa-html5"></i> HTML</span>
+      <span class="tech-tag css"><i class="fab fa-css3-alt"></i> CSS</span>
+      <span class="tech-tag js"><i class="fab fa-js"></i> JavaScript</span>
+      <span class="tech-tag storage"><i class="fas fa-database"></i> localStorage</span>
+      <span class="tech-tag sdg">SDG 8</span>
+    </div>
+  </header>
+
+  <main class="demo-wrap">
+    <section class="demo-card">
+      <h2 class="section-title" style="margin-top:0;">快速進入系統</h2>
+      <div class="demo-actions">
+        <a class="demo-btn primary" href="./index.html"><i class="fas fa-play"></i> 進入首頁（開始）</a>
+        <a class="demo-btn" href="./survey.html"><i class="fas fa-clipboard-list"></i> 進入問卷（條件選擇）</a>
+        <a class="demo-btn" href="./result.html"><i class="fas fa-chart-line"></i> 進入結果（Top3＋匹配度）</a>
+        <a class="demo-btn" href="./video.html"><i class="fas fa-play-circle"></i> 進入影片教學（三支影片）</a>
+      </div>
+
+      <div class="demo-note">
+        <strong>建議操作順序：</strong> 首頁 → 問卷 → 結果 → 影片教學。<br/>
+        <span class="small-muted">※ 若直接進入結果頁，會讀取 localStorage 中最後一次的問卷答案。</span>
+      </div>
+
+      <div class="sdg-box" style="margin-top:18px;">
+        <strong>為什麼是 SDG 8？</strong>
+        <div class="sdg-note">
+          本系統以「銀髮再就業」與「友善職場」為核心，透過條件媒合提供更合適、可持續且更有尊嚴的工作建議，呼應 SDG 8 的精神。
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>胡學慈 作品｜致力落實 SDG 永續發展目標</p>
+  </footer>
+</body>
+</html>
